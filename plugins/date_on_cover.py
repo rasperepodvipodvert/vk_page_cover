@@ -3,6 +3,7 @@ import settings
 import datetime
 import os
 from plugins.resize_and_crop import *
+import random
 
 def date_on_cover(
         font='./fonts/28days.ttf',
@@ -10,10 +11,11 @@ def date_on_cover(
         text=datetime.datetime.strftime(datetime.datetime.now(), "%d.%m.%Y")
 
 ):
-    randome_file = getRandomFile(os.getcwd()+'/cover/')
-    im = Image.open(settings.cover_path).convert('RGBA')
+    randome_file = './cover/'+getRandomFile(os.getcwd()+'/cover/')
+    # im = Image.open(settings.cover_path).convert('RGBA')
+    im = Image.open(randome_file).convert('RGBA')
     size = (1590, 400)
-    im = resize_and_crop(im, size, crop_type='top')
+    im = resize_and_crop(im, size, crop_type='middle')
     txt = Image.new('RGBA', im.size, (255, 255, 255, 0))
     fnt = ImageFont.truetype(font, font_size)
     draw = ImageDraw.Draw(im)
