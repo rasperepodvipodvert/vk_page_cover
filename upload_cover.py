@@ -2,6 +2,9 @@
 import vk_api
 import settings
 
+from plugins.date_on_cover import * # подключаем плагины
+
+
 
 def main():
 
@@ -14,8 +17,10 @@ def main():
         return
 
     upload = vk_api.VkUpload(vk_session)
+
+
     photo = upload.photo_cover(  # Подставьте свои данные
-        photo=settings.cover_path,
+        photo=date_on_cover(),
         group_id=settings.group_id,
         crop_x=0,
         crop_y=0,
