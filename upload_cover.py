@@ -13,7 +13,6 @@ def main():
         print(error_msg)
         return
 
-    vk = vk_session.get_api()
     upload = vk_api.VkUpload(vk_session)
     photo = upload.photo_cover(  # Подставьте свои данные
         photo=settings.cover_path,
@@ -23,6 +22,7 @@ def main():
         crop_x2=1590,
         crop_y2=400
     )
+    return photo
 
 
 if __name__ == '__main__':
