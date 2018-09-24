@@ -23,6 +23,6 @@ def date_on_cover(
         font=fnt
     )
     out = Image.alpha_composite(im, txt)
-    save_path = os.getcwd() + "/cover/test.png"
+    save_path = os.getcwd() + "/cover/date_on_cover.png"
     out.save(save_path, 'PNG')
     return save_path
