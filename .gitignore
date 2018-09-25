@@ -1,0 +1,5 @@
+venv
+.idea
+vk_config.v2.json
+settings.py
+run.log
