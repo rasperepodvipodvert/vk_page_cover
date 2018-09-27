@@ -3,3 +3,5 @@ venv
 vk_config.v2.json
 auth.py
 run.log
+__pycache__/
+plugins/__pycache__/
