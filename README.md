@@ -1,6 +1,7 @@
 # Программа для автоматической смены COVER изображения в группе VK
 ## Пример: 
 https://vk.com/filatovzru
+![](date_on_cover.png)
 
 ## Установка:
 ```bash
