@@ -3,10 +3,11 @@ import vk_api
 
 from plugins.date_on_cover import *  # подключаем плагины
 from plugins.general import *
+from auth import *
 
 
 def main():
-    vk_session = vk_api.VkApi(settings.login, settings.password)
+    vk_session = vk_api.VkApi(login, password)
 
     try:
         vk_session.auth(token_only=True)
